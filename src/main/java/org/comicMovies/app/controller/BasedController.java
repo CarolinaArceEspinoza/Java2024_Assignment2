@@ -16,7 +16,8 @@ public class BasedController {
     public final String HOME_PATH = "src/main/resources/org/comicMovies/app/homePage.fxml";
     public final String MOVIE_PATH = "src/main/resources/org/comicMovies/app/view/MovieView.fxml";
     public final String MCU_ID = "src/main/resources/org/comicMovies/app/view/marvelMovies.fxml";
-    public final String DCEU_ID = "229266";
+    public final String DCEU_ID = "src/main/resources/org/comicMovies/app/view/marvelMovies.fxml";
+        //"229266"
 
 
 
@@ -42,7 +43,7 @@ public class BasedController {
     }
 
     public void dceuButton(ActionEvent actionEvent) throws IOException {
-        switchSC(DCEU_ID, actionEvent);
+    switchSC(DCEU_ID, actionEvent);
     }
 
     public void movieViewButton(ActionEvent actionEvent) throws IOException {

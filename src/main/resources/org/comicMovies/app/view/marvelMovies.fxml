@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -13,12 +14,12 @@
 <!-- VISUAL STRUCTURE -->
 <!-- END VISUAL STRUCTURE -->
 
-<VBox fx:id="tableViewContainter" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" spacing="20.0" styleClass="anchor" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.comicMovies.app.controller.homePageController">
+<VBox fx:id="tableViewContainter" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" spacing="20.0" styleClass="anchor" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.comicMovies.app.controller.MarvelMoviesController">
 
     <!-- HEADER -->
 
     <!-- TITLE -->
-    <Label styleClass="app-title" text="THE BEST CINEMATOGRAPHIC UNIVERSES" textFill="WHITE">
+    <Label styleClass="app-title" text="SOLO MARVEL" textFill="WHITE">
         <font>
             <Font name="Arial Bold" size="20.0" />
         </font>
@@ -31,7 +32,7 @@
     </Label>
 
     <!-- NAVIGATION BAR -->
-    <ButtonBar buttonMinWidth="100.0" layoutX="213.0" layoutY="75.0" prefHeight="40.0" prefWidth="600.0" styleClass="buttonbar" stylesheets="@css/style.css">
+    <ButtonBar buttonMinWidth="100.0" layoutX="213.0" layoutY="75.0" prefHeight="40.0" prefWidth="600.0" styleClass="buttonbar" stylesheets="@../css/style.css">
         <VBox.margin>
             <Insets left="200.0" right="200.0" />
         </VBox.margin>
@@ -39,14 +40,14 @@
             <Insets bottom="6.0" left="6.0" right="10.0" top="6.0" />
         </padding>
       <buttons>
-         <RadioButton fx:id="mcu_option" onAction="#mcuButton" mnemonicParsing="false" prefHeight="18.0" prefWidth="269.0" text="MARVEL CINEMATIC UNIVERSE" />
-         <RadioButton fx:id="dceu_option" onAction="#dceuButton" mnemonicParsing="false" prefHeight="18.0" prefWidth="269.0" text="DC EXTENDED UNIVERSE" />
+          <RadioButton id="180547" fx:id="mcu_option" mnemonicParsing="false" prefHeight="18.0" prefWidth="269.0" text="MARVEL CINEMATIC UNIVERSE" />
+          <RadioButton id="229266" fx:id="dceu_option" mnemonicParsing="false" prefHeight="18.0" prefWidth="269.0" text="DC EXTENDED UNIVERSE" />
       </buttons>
     </ButtonBar>
     <!-- END HEADER -->
 
     <!-- TABLE STRUCTURE -->
-   <TableView fx:id="containerTable" maxHeight="1.7976931348623157E308" prefHeight="500.0" prefWidth="900.0" styleClass="barchart" stylesheets="@css/style.css">
+   <TableView fx:id="containerTable" maxHeight="1.7976931348623157E308" prefHeight="500.0" prefWidth="900.0" styleClass="barchart" stylesheets="@../css/style.css">
        <!-- FIELDS -->
        <columns>
          <TableColumn fx:id="idColumn" prefWidth="65.0" text="ID" />
@@ -62,6 +63,7 @@
          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
       </columnResizePolicy>
    </TableView>
+   <Pagination fx:id="pager" prefHeight="200.0" prefWidth="200.0" />
     <!-- END TABLE STRUCTURE -->
 
 </VBox>

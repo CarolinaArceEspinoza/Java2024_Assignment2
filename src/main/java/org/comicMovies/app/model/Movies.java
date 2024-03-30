@@ -5,32 +5,52 @@ import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
 
 import java.sql.*;
+import java.util.ArrayList;
 
 public class Movies {
 
     /* VARIABLES */
-    private Integer id;
-    private Integer with_keywords;
-    private String title;
-    private String overview;
-    private String poster_path;
-    private String release_date;
+    public Boolean adult;
+    public String  backdrop_path;
+    public ArrayList<Integer> genre_ids;
+    public Integer id;
+    public String original_language;
+    public String original_title;
+    public String overview;
+    public Double popularity;
+    public String poster_path;
+    public String release_date;
+    public String title;
+    public Boolean video;
+    public Double vote_average;
+    public Double vote_count;
 
-    /* CONSTRUCTOR NO ARGUMENTS */
     public Movies() {
     }
 
-    /* CONSTRUCTOR WITH ARGUMENTS */
-    public Movies(Integer id, Integer universeKeyword, String title, String overview, String poster_path, String release_date) {
-        this.id = id;
-        this.with_keywords = with_keywords;
-        this.title = title;
-        this.overview = overview;
-        this.poster_path = poster_path;
-        this.release_date = release_date;
+    public Boolean getAdult() {
+        return adult;
     }
 
-    /* SETTERS AND GETTERS */
+    public void setAdult(Boolean adult) {
+        this.adult = adult;
+    }
+
+    public String getBackdrop_path() {
+        return backdrop_path;
+    }
+
+    public void setBackdrop_path(String backdrop_path) {
+        this.backdrop_path = backdrop_path;
+    }
+
+    public ArrayList<Integer> getGenre_ids() {
+        return genre_ids;
+    }
+
+    public void setGenre_ids(ArrayList<Integer> genre_ids) {
+        this.genre_ids = genre_ids;
+    }
 
     public Integer getId() {
         return id;
@@ -40,20 +60,20 @@ public class Movies {
         this.id = id;
     }
 
-    public Integer getUniverseKeyword() {
-        return with_keywords;
+    public String getOriginal_language() {
+        return original_language;
     }
 
-    public void setUniverseKeyword(Integer universeKeyword) {
-        this.with_keywords = universeKeyword;
+    public void setOriginal_language(String original_language) {
+        this.original_language = original_language;
     }
 
-    public String getTitle() {
-        return title;
+    public String getOriginal_title() {
+        return original_title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setOriginal_title(String original_title) {
+        this.original_title = original_title;
     }
 
     public String getOverview() {
@@ -62,6 +82,14 @@ public class Movies {
 
     public void setOverview(String overview) {
         this.overview = overview;
+    }
+
+    public Double getPopularity() {
+        return popularity;
+    }
+
+    public void setPopularity(Double popularity) {
+        this.popularity = popularity;
     }
 
     public String getPoster_path() {
@@ -80,5 +108,35 @@ public class Movies {
         this.release_date = release_date;
     }
 
+    public String getTitle() {
+        return title;
+    }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public Boolean getVideo() {
+        return video;
+    }
+
+    public void setVideo(Boolean video) {
+        this.video = video;
+    }
+
+    public Double getVote_average() {
+        return vote_average;
+    }
+
+    public void setVote_average(Double vote_average) {
+        this.vote_average = vote_average;
+    }
+
+    public Double getVote_count() {
+        return vote_count;
+    }
+
+    public void setVote_count(Double vote_count) {
+        this.vote_count = vote_count;
+    }
 }

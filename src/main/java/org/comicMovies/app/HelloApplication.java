@@ -23,7 +23,6 @@ public class HelloApplication extends Application {
 
         // Llamar a la API después de mostrar la ventana
         homePageController controller = fxmlLoader.getController();
-        controller.callApi();
     }
 
     public static void main(String[] args) {

@@ -4,8 +4,6 @@
 <?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.effect.Bloom?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -39,8 +37,8 @@
             <Insets bottom="6.0" left="6.0" right="10.0" top="6.0" />
         </padding>
       <buttons>
-         <RadioButton fx:id="mcu_option" onAction="#mcuButton" mnemonicParsing="false" prefHeight="18.0" prefWidth="269.0" text="MARVEL CINEMATIC UNIVERSE" />
-         <RadioButton fx:id="dceu_option" onAction="#dceuButton" mnemonicParsing="false" prefHeight="18.0" prefWidth="269.0" text="DC EXTENDED UNIVERSE" />
+          <RadioButton id="180547" fx:id="mcu_option" mnemonicParsing="false" onAction="#mcuButton" prefHeight="18.0" prefWidth="269.0" text="MARVEL CINEMATIC UNIVERSE" />
+          <RadioButton id="229266" fx:id="dceu_option" mnemonicParsing="false" onAction="#dceuButton" prefHeight="18.0" prefWidth="269.0" text="DC EXTENDED UNIVERSE" />
       </buttons>
     </ButtonBar>
     <!-- END HEADER -->

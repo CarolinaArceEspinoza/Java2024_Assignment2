@@ -12,4 +12,6 @@ module org.example.demo {
     opens org.comicMovies.app.model to javafx.fxml;
     exports org.comicMovies.app.controller;
     opens org.comicMovies.app.controller to javafx.fxml;
+    exports org.comicMovies.app.apiClient;
+    opens org.comicMovies.app.apiClient to javafx.fxml;
 }
