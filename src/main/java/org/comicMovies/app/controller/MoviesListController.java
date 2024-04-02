@@ -11,10 +11,9 @@ import org.comicMovies.app.apiClient.SimpleApiHttpClient;
 import org.comicMovies.app.model.RespMovies;
 
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
 
-public class MarvelMoviesController extends BasedController implements Initializable {
+public class MoviesListController extends BasedController implements Initializable {
 
     @FXML
     private TableView<Movies> containerTable;
@@ -39,13 +38,22 @@ public class MarvelMoviesController extends BasedController implements Initializ
 
     private SimpleApiHttpClient apiClient;
 
+    private boolean marvelOn;
+
+    private boolean dcOn;
+
     @FXML
     private Pagination pager;
+
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         apiClient = new SimpleApiHttpClient();
-        loadMovies("180547"); // Cargar películas de Marvel directamente al iniciar la vista
+        loadMovies(mcu_option.isSelected() ? "180547" : "229266"); // Cargar películas de Marvel directamente al iniciar la vista
+
+        mcu_option.setSelected(marvelOn);
+        dceu_option.setSelected(dcOn);
 
         // Asignar eventos a los botones de radio
         mcu_option.setToggleGroup(universeToggleGroup);
@@ -54,14 +62,19 @@ public class MarvelMoviesController extends BasedController implements Initializ
         // Manejar el cambio de selección de los botones de radio
         mcu_option.setOnAction(event -> {
             loadMovies("180547");
+            dceu_option.setSelected(false);
         });
 
         dceu_option.setOnAction(event -> {
             loadMovies("229266");
+            mcu_option.setSelected(false);
         });
+
+
     }
 
     private void loadMovies(String keyword) {
+
         String url = "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_keywords=" + keyword;
 
         try {
@@ -83,15 +96,26 @@ public class MarvelMoviesController extends BasedController implements Initializ
         dateColumn.setCellValueFactory(new PropertyValueFactory<>("release_date"));
         containerTable.setItems(movies);
 
-        /*pager = new Pagination((movies.size() / 1000 + 1), 0);
+        pager = new Pagination((movies.size() / 1000 + 1), 0);
         pager.setPageCount(movies.size());
         pager.setPageFactory((Integer pageIndex) -> createPage(movies, pageIndex));
         //paginator.setCurrentPageIndex(3);
-        //paginator.setMaxPageIndicatorCount(3);*/
+        //paginator.setMaxPageIndicatorCount(3);
     }
 
-    /*public TableView<Movies> createPage(ObservableList<Movies> movies, int page) {
+    public void setUniverse(boolean mcuButton, boolean dceuButton) {
+
+
+        marvelOn = mcuButton;
+        dcOn = dceuButton;
+
+
+    }
+
+
+
+    public TableView<Movies> createPage(ObservableList<Movies> movies, int page) {
         containerTable.getItems().setAll(movies.get(page));
         return containerTable;
-    }*/
+    }
 }

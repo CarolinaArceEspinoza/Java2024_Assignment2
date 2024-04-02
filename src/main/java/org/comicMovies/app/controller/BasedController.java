@@ -15,8 +15,8 @@ public class BasedController {
 
     public final String HOME_PATH = "src/main/resources/org/comicMovies/app/homePage.fxml";
     public final String MOVIE_PATH = "src/main/resources/org/comicMovies/app/view/MovieView.fxml";
-    public final String MCU_ID = "src/main/resources/org/comicMovies/app/view/marvelMovies.fxml";
-    public final String DCEU_ID = "src/main/resources/org/comicMovies/app/view/marvelMovies.fxml";
+    public final String MCU_ID = "src/main/resources/org/comicMovies/app/view/MoviesList.fxml";
+    public final String DCEU_ID = "src/main/resources/org/comicMovies/app/view/MoviesList.fxml";
         //"229266"
 
 

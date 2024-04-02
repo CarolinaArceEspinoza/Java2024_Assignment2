@@ -73,6 +73,11 @@
             <version>2.10.1</version>
             <!-- Make sure you specify most recent version -->
         </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics</artifactId>
+            <version>20.0.1</version>
+        </dependency>
     </dependencies>
 
     <build>
