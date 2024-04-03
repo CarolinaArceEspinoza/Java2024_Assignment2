@@ -15,7 +15,7 @@
 <!-- VISUAL STRUCTURE -->
 <!-- END VISUAL STRUCTURE -->
 
-<VBox fx:id="tableViewContainter" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" spacing="20.0" styleClass="anchor" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.comicMovies.app.controller.MoviesListController">
+<VBox fx:id="tableViewContainter" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" spacing="20.0" styleClass="anchor" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
 
     <!-- HEADER -->
 
@@ -43,7 +43,7 @@
         </padding>
       <buttons>
           <RadioButton id="180547" fx:id="mcu_option" mnemonicParsing="false" prefHeight="18.0" prefWidth="269.0" text="MARVEL CINEMATIC UNIVERSE" />
-          <RadioButton id="229266" fx:id="dceu_option" mnemonicParsing="false" prefHeight="18.0" prefWidth="269.0" text="DC EXTENDED UNIVERSE" />
+          <RadioButton id="229266" fx:id="dcu_option" mnemonicParsing="false" prefHeight="18.0" prefWidth="269.0" text="DC EXTENDED UNIVERSE" />
       </buttons>
     </ButtonBar>
     <!-- END HEADER -->

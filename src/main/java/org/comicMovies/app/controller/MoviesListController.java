@@ -16,7 +16,7 @@ import javax.security.auth.callback.Callback;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MoviesListController extends BasedController implements Initializable {
+public class MoviesListController implements Initializable {
 
     @FXML
     private Text textoPrueba;
@@ -40,13 +40,12 @@ public class MoviesListController extends BasedController implements Initializab
     private RadioButton mcu_option;
 
     @FXML
-    private RadioButton dceu_option;
+    private RadioButton dcu_option;
 
     private SimpleApiHttpClient apiClient;
 
     private boolean marvelOn;
 
-    private boolean dcOn;
 
     @FXML
     private Pagination pager;
@@ -56,23 +55,31 @@ public class MoviesListController extends BasedController implements Initializab
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         apiClient = new SimpleApiHttpClient();
-        String keyword = mcu_option.isSelected() ? "180547" : "229266";
-        loadMovies(mcu_option.isSelected() ? "180547" : "229266", 1);
+        String keyword;
 
-        mcu_option.setSelected(marvelOn);
-        dceu_option.setSelected(dcOn);
+        if(marvelOn){
+            keyword = "180547";
+            mcu_option.setSelected(Boolean.TRUE);
+            dcu_option.setSelected(Boolean.FALSE);
+        }else{
+            keyword = "229266";
+            mcu_option.setSelected(Boolean.FALSE);
+            dcu_option.setSelected(Boolean.TRUE);
+        }
+
+        loadMovies(keyword, 1);
 
         // Asignar eventos a los botones de radio
         mcu_option.setToggleGroup(universeToggleGroup);
-        dceu_option.setToggleGroup(universeToggleGroup);
+        dcu_option.setToggleGroup(universeToggleGroup);
 
         // Manejar el cambio de selección de los botones de radio
         mcu_option.setOnAction(event -> {
             loadMovies("180547", 1);
-            dceu_option.setSelected(false);
+            dcu_option.setSelected(false);
         });
 
-        dceu_option.setOnAction(event -> {
+        dcu_option.setOnAction(event -> {
             loadMovies("229266", 1);
             mcu_option.setSelected(false);
         });
@@ -147,12 +154,9 @@ public class MoviesListController extends BasedController implements Initializab
 
     }
 
-    public void setUniverse(boolean mcuButton, boolean dceuButton) {
+    public void setUniverse(boolean mcuButton) {
         marvelOn = mcuButton;
-        dcOn = dceuButton;
     }
-
-
 
     public TableView<Movies> createPage(ObservableList<Movies> movies, int page) {
         containerTable.getItems().setAll(movies.get(page));

@@ -38,7 +38,7 @@
         </padding>
       <buttons>
           <RadioButton id="180547" fx:id="mcu_option" mnemonicParsing="false" onAction="#mcuButton" prefHeight="18.0" prefWidth="269.0" text="MARVEL CINEMATIC UNIVERSE" />
-          <RadioButton id="229266" fx:id="dceu_option" mnemonicParsing="false" onAction="#dceuButton" prefHeight="18.0" prefWidth="269.0" text="DC EXTENDED UNIVERSE" />
+          <RadioButton id="229266" fx:id="dcu_option" mnemonicParsing="false" onAction="#dcuButton" prefHeight="18.0" prefWidth="269.0" text="DC EXTENDED UNIVERSE" />
       </buttons>
     </ButtonBar>
     <!-- END HEADER -->
