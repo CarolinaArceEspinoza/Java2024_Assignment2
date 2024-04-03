@@ -8,7 +8,9 @@ public class RespMovies {
     @SerializedName("page")
     public int page;
     public List<Movies> results;
+    @SerializedName("total_pages")
     public int total_pages;
+
     public int total_results;
 
     public RespMovies() {

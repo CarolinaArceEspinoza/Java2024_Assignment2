@@ -25,6 +25,8 @@ public class Movies {
     public Double vote_average;
     public Double vote_count;
 
+    public int total_pages;
+
     public Movies() {
     }
 
@@ -50,6 +52,14 @@ public class Movies {
 
     public void setGenre_ids(ArrayList<Integer> genre_ids) {
         this.genre_ids = genre_ids;
+    }
+
+    public int getTotal_pages() {
+        return total_pages;
+    }
+
+    public void setTotal_pages(int total_pages) {
+        this.total_pages = total_pages;
     }
 
     public Integer getId() {
