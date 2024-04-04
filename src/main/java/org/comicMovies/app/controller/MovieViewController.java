@@ -8,7 +8,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 /* CONTROLLER CLASS TO MANAGES THE FUNCTIONALITY OF MovieView.fxml */
-public class MovieViewController extends BasedController implements Initializable {
+public class MovieViewController implements Initializable {
 
 
     /* INITIALIZES THE CONTROLLER, SETS UP RADIO BUTTON GROUP, LOAD INITIAL DATA AND SETS DEFAULT SELECTION */
