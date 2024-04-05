@@ -5,18 +5,23 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <!-- VISUAL STRUCTURE -->
 <!-- END VISUAL STRUCTURE -->
 
-<VBox fx:id="tableViewContainter" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" spacing="20.0" styleClass="anchor" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.comicMovies.app.controller.homePageController">
+<VBox fx:id="tableViewContainter" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" spacing="20.0" styleClass="anchor" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.comicMovies.app.controller.homePageController">
 
     <!-- HEADER -->
 
     <!-- TITLE -->
-    <Label styleClass="app-title" text="THE BEST CINEMATOGRAPHIC UNIVERSES" textFill="WHITE">
+    <Label alignment="TOP_CENTER" styleClass="app-title" text="THE BEST CINEMATOGRAPHIC UNIVERSES" textFill="WHITE">
         <font>
             <Font name="Arial Bold" size="20.0" />
         </font>
@@ -41,6 +46,27 @@
           <RadioButton id="229266" fx:id="dcu_option" mnemonicParsing="false" onAction="#dcuButton" prefHeight="18.0" prefWidth="269.0" text="DC EXTENDED UNIVERSE" />
       </buttons>
     </ButtonBar>
+   <GridPane alignment="TOP_RIGHT" prefHeight="409.0" prefWidth="1000.0">
+     <columnConstraints>
+       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+     </columnConstraints>
+     <rowConstraints>
+       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+     </rowConstraints>
+      <children>
+         <ImageView fx:id="imageUniverse1" accessibleRole="BUTTON" fitHeight="395.0" fitWidth="284.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@images/background1_A.jpg" />
+            </image>
+         </ImageView>
+         <ImageView fx:id="imageUniverse2" accessibleRole="BUTTON" fitHeight="332.0" fitWidth="278.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+            <image>
+               <Image url="@images/background1_B.jpg" />
+            </image>
+         </ImageView>
+      </children>
+   </GridPane>
     <!-- END HEADER -->
 
 
