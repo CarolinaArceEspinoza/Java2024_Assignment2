@@ -3,14 +3,20 @@ package org.comicMovies.app.controller;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import org.comicMovies.app.model.Movies;
 import org.comicMovies.app.apiClient.SimpleApiHttpClient;
 import org.comicMovies.app.model.RespMovies;
 
+import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -52,11 +58,19 @@ public class MoviesListController implements Initializable {
 
     private final String KEY_DCU = "229266";
 
-
+    private final String URI = "src/main/resources/org/comicMovies/app/view/MovieView.fxml";
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
         apiClient = new SimpleApiHttpClient();
+
+        containerTable.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue != null) {
+                showMovieDetails(newValue.getId());
+            }
+        });
+
 
         if (marvelOn) {
             keyword = KEY_MCU;
@@ -134,4 +148,28 @@ public class MoviesListController implements Initializable {
     public void setUniverse(boolean mcuButton) {
         marvelOn = mcuButton;
     }
+
+
+    private void showMovieDetails(int movieId) {
+
+        try {
+            URL url = new File(URI).toURI().toURL();
+
+            MovieViewController controller = new MovieViewController();
+            controller.setConfigure(movieId, 0);
+            FXMLLoader loader = new FXMLLoader(url);
+            loader.setController(controller);
+
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }

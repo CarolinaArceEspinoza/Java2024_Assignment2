@@ -18,7 +18,7 @@
 <!-- VISUAL STRUCTURE -->
 <!-- END VISUAL STRUCTURE -->
 
-<VBox fx:id="powerViewContainter" onAction="#homeViewButton"  alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" spacing="20.0" styleClass="anchor" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.comicMovies.app.controller.MovieViewController">
+<VBox fx:id="powerViewContainter" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" spacing="20.0" styleClass="anchor" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" >
     <!-- HEADER -->
 
     <!-- TITLE -->
@@ -37,7 +37,7 @@
     <!-- NAVIGATION BAR -->
     <ButtonBar buttonMinWidth="100.0" layoutX="213.0" layoutY="75.0" prefHeight="40.0" prefWidth="600.0" styleClass="buttonbar" stylesheets="@../css/style.css">
         <buttons>
-            <Button fx:id="goBackButton" onAction="#homeViewButton" contentDisplay="CENTER" mnemonicParsing="false" text="Go Back" textAlignment="CENTER" />
+            <Button fx:id="goBackButton" contentDisplay="CENTER" mnemonicParsing="false" text="Go Back" textAlignment="CENTER" />
         </buttons>
         <VBox.margin>
             <Insets left="200.0" right="200.0" />

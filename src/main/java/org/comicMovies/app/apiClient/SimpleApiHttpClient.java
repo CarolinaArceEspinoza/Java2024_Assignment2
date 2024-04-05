@@ -13,6 +13,7 @@ import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
+import org.comicMovies.app.model.DetailMovie;
 import org.comicMovies.app.model.Movies;
 import org.comicMovies.app.model.RespMovies;
 
@@ -62,6 +63,28 @@ public class SimpleApiHttpClient {
                     .create();  // Create a Gson instance
 
             RespMovies preRes = gson.fromJson(json, RespMovies.class);
+
+            return preRes; // Convert the JSON string into a list of Post objects using Gson
+        } catch (Exception e) {
+            /* Handle exceptions gracefully */
+            System.err.println("Error parsing JSON: " + e.getMessage()); // Print a user-friendly error message
+            return null; // Return null to indicate failure
+        }
+    }
+
+    public DetailMovie parseJsonDetail(String json) {
+        try {
+            Gson gson = new GsonBuilder()
+                    .setFieldNamingPolicy(FieldNamingPolicy.IDENTITY)
+                    .setFieldNamingStrategy(FieldNamingPolicy.IDENTITY)
+                    .setPrettyPrinting()
+                    .serializeNulls()
+                    .setLenient()
+                    .setVersion(1.0)
+                    .excludeFieldsWithModifiers(Modifier.FINAL, Modifier.TRANSIENT, Modifier.STATIC)
+                    .create();  // Create a Gson instance
+
+            DetailMovie preRes = gson.fromJson(json, DetailMovie.class);
 
             return preRes; // Convert the JSON string into a list of Post objects using Gson
         } catch (Exception e) {
