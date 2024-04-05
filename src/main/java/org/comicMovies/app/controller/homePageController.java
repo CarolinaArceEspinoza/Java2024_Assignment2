@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.RadioButton;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import org.comicMovies.app.HelloApplication;
 
@@ -17,6 +18,11 @@ import java.net.URL;
 
 
 public class homePageController {
+    @FXML
+    private ImageView imageUniverse1;
+
+    @FXML
+    private ImageView imageUniverse2;
 
     @FXML
     private RadioButton mcu_option;

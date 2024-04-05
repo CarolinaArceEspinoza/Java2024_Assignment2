@@ -1,8 +1,8 @@
 /* GENERAL CONTENT AND BUTTON BAR */
 .anchor {
-    -fx-background-image: url("../images/background1.jpg");
+    -fx-background-image: url("../images/background1-2.jpg");
     -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
+    -fx-background-position: bottom center;
     -fx-background-size: cover;
     -fx-width:100%;
 }
@@ -10,6 +10,42 @@
     -fx-background-color: rgba(0,0,0,0.6);
     -fx-height: 100%;
 }
+.custom-radio-button1 {
+    -fx-background-image: url("../images/background1_EMPTY.png");
+    -fx-text-fill: transparent; /* Oculta el texto, ya que ahora usaremos una imagen */
+    -fx-background-color: transparent; /* Fondo transparente para que solo se muestre la imagen */
+    -fx-padding: 0px;
+    -fx-background-radius: 0; /* No se necesita un radio de fondo */
+    -fx-background-size: contain; /* Ajusta el tamaño de la imagen para que quepa dentro del espacio disponible */
+    -fx-background-repeat: no-repeat; /* Evita que la imagen se repita */
+
+}
+.custom-radio-button2 {
+    -fx-background-image: url("../images/background1_EMPTY.png");
+    -fx-text-fill: transparent; /* Oculta el texto, ya que ahora usaremos una imagen */
+    -fx-padding: 0px;
+    -fx-background-color: transparent; /* Fondo transparente para que solo se muestre la imagen */
+    -fx-background-radius: 0; /* No se necesita un radio de fondo */
+    -fx-background-size: cover; /* Ajusta el tamaño de la imagen para que quepa dentro del espacio disponible */
+    -fx-background-repeat: no-repeat; /* Evita que la imagen se repita */
+
+}
+/* Estilo para RadioButton cuando está seleccionado */
+.custom-radio-button1:hover {
+    -fx-graphic: url("../images/background1-2_A.jpg"); /* Cambia la imagen cuando está seleccionado */
+
+}
+.custom-radio-button2:hover {
+    -fx-graphic: url("../images/background1-2_B.jpg"); /* Cambia la imagen cuando está seleccionado */
+}
+
+
+
+
+
+
+
+
 .posterDesign {
     -fx-border-color: blue ;
     -fx-border-width: 5 ;
@@ -110,67 +146,3 @@
 .scroll-bar:vertical .thumb:pressed {
     -fx-background-color: black;
 }
-
-
-/* BARCHART STYLES */
-.barchart {
-    -fx-background-color: rgba(0,0,0,0.4);
-    -fx-background-radius: 10px;
-    -fx-padding: 20px;
-}
-.chart-bar {
-    -fx-background-color: linear-gradient(#880016, #1c2252);
-    -fx-background-radius:3px 3px 0px 0px;
-}
-.chart-bar:hover {
-    -fx-background-color: linear-gradient(#bf0000, #bf0000);
-}
-.chart-plot-background {
-    -fx-background-color: rgba(255,255,255,0.7);
-}
-.axis-label {
-    -fx-alignment: CENTER;
-    -fx-tick-label-fill: #ffe205;
-    -fx-text-fill: #ffe205;
-}
-.chart-title {
-    -fx-font-size: 22px;
-    -fx-font-family: "Arial";
-    -fx-text-fill: white;
-    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,1) , 3, 0.0 , 0 , 1 );
-    -fx-font-weight: bold;
- }
- .axis {
-    -fx-text-fill: #4682b4;
- }
-.chart-value {
-    -fx-text-fill: #ffe205;
-    -fx-text-size : 14px;
-    -fx-font-weight: bold;
-}
-.chart-horizontal-grid-lines {
-    -fx-stroke:rgba(0,0,0,0.3);
-    -fx-stroke-width: 1px;
-}
-
-/* PIE CHART STYLE */
-.pieChart {
-    -fx-background-color: rgba(0,0,0,0.4);
-    -fx-background-radius: 10px;
-    -fx-padding: 20px;
-    }
-.chart-pie-label-line {
-    -fx-stroke: yellow;
-    -fx-fill: yellow;
-    }
-.chart-pie-label {
-    -fx-fill: white;
-    -fx-background-color: rgba(0,0,0,0.8);
-    -fx-font-family: "Arial";
-    -fx-font-weight: bold;
-    -fx-font-size: 16px;
-       }
-.chart-legend {
-   -fx-background-color: rgba(255,255,255,0.8);
-   -fx-stroke: white;
-    }

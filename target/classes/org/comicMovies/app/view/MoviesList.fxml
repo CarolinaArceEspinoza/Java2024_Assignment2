@@ -19,7 +19,7 @@
     <!-- HEADER -->
 
     <!-- TITLE -->
-    <Label styleClass="app-title" text="SOLO MARVEL" textFill="WHITE">
+    <Label styleClass="app-title" text="THE BEST CINEMATOGRAPHIC SUPERHEROES UNIVERSES" textFill="WHITE">
         <font>
             <Font name="Arial Bold" size="20.0" />
         </font>
