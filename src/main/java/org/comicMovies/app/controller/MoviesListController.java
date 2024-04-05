@@ -23,9 +23,6 @@ import java.util.ResourceBundle;
 public class MoviesListController implements Initializable {
 
     @FXML
-    private Text textoPrueba;
-
-    @FXML
     private TableView<Movies> containerTable;
 
     @FXML

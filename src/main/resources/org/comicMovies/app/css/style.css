@@ -6,6 +6,15 @@
     -fx-background-size: cover;
     -fx-width:100%;
 }
+.cajaFiltro {
+    -fx-background-color: rgba(0,0,0,0.6);
+    -fx-height: 100%;
+}
+.posterDesign {
+    -fx-border-color: blue ;
+    -fx-border-width: 5 ;
+    -fx-border-style: segments(10, 15, 15, 15)  line-cap round ;
+}
 .buttonbar {
     -fx-background-color: rgba(255,255,255,0.7);
     -fx-background-radius:20px;
