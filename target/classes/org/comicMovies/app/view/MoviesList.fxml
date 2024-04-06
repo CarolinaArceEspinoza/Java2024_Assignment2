@@ -19,6 +19,7 @@
     <!-- HEADER -->
 
     <!-- TITLE -->
+    <!-- Label for the application title -->
     <Label styleClass="app-title" text="THE BEST CINEMATOGRAPHIC SUPERHERO UNIVERSES" textFill="#f5c518">
         <font>
             <Font name="Arial Bold" size="25.0" />
@@ -26,47 +27,56 @@
         <effect>
             <Bloom />
         </effect>
+        <!-- Margin for the label -->
         <VBox.margin>
             <Insets top="20.0" />
         </VBox.margin>
     </Label>
 
     <!-- NAVIGATION BAR -->
-    <ButtonBar buttonMinWidth="100.0" layoutX="213.0" layoutY="75.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="800.0" styleClass="buttonbar" stylesheets="@../css/style.css">
-        <VBox.margin>
-            <Insets />
-        </VBox.margin>
+    <!-- ButtonBar for navigation options -->
+    <ButtonBar buttonMinWidth="100.0" layoutX="213.0" layoutY="75.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="817.0" styleClass="buttonbar" stylesheets="@../css/style.css">
+        <!-- Padding for the ButtonBar -->
         <padding>
             <Insets bottom="6.0" left="6.0" right="10.0" top="6.0" />
         </padding>
-      <buttons>
-          <RadioButton id="180547" fx:id="mcu_option" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="380.0" text="Marvel Cinematic Universe (MCU)" textAlignment="CENTER">
-            <font>
-               <Font name="Arial Bold" size="15.0" />
-            </font></RadioButton>
-          <RadioButton id="229266" fx:id="dcu_option" alignment="CENTER_LEFT" contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="380.0" text="DC Extended Universe (DCEU)" textAlignment="RIGHT">
-            <font>
-               <Font name="Arial Bold" size="15.0" />
-            </font></RadioButton>
-      </buttons>
+        <!-- RadioButtons for MCU and DCU options -->
+        <buttons>
+            <!-- MCU option RadioButton -->
+            <RadioButton id="180547" fx:id="mcu_option" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="380.0" text="Marvel Cinematic Universe (MCU)" textAlignment="CENTER">
+                <font>
+                    <Font name="Arial Bold" size="15.0" />
+                </font>
+            </RadioButton>
+            <!-- DCU option RadioButton -->
+            <RadioButton id="229266" fx:id="dcu_option" alignment="CENTER_LEFT" contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="380.0" text="DC Extended Universe (DCEU)" textAlignment="RIGHT">
+                <font>
+                    <Font name="Arial Bold" size="15.0" />
+                </font>
+            </RadioButton>
+        </buttons>
     </ButtonBar>
     <!-- END HEADER -->
 
     <!-- TABLE STRUCTURE -->
-   <TableView fx:id="containerTable" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="820.0" styleClass="barchart" stylesheets="@../css/style.css">
-       <!-- FIELDS -->
-       <columns>
-         <TableColumn fx:id="idColumn" prefWidth="65.0" text="ID" visible="false" />
-         <TableColumn fx:id="titleColumn" prefWidth="600.0" styleClass="nameStyle" text="Original Title" />
-         <TableColumn fx:id="dateColumn" prefWidth="178.0" text="Date" />
-     </columns>
-
-       <!-- DESIGN -->
-      <VBox.margin>
-         <Insets />
-      </VBox.margin>
-   </TableView>
-   <Pagination fx:id="pager" cache="true" cacheHint="SPEED" maxHeight="-Infinity" maxPageIndicatorCount="0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="850.0" />
+    <!-- TableView for displaying movie information -->
+    <TableView fx:id="containerTable" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="820.0" styleClass="barchart" stylesheets="@../css/style.css">
+        <!-- TableColumn definitions -->
+        <!-- TableColumn for ID -->
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="65.0" text="ID" visible="false" />
+            <!-- TableColumn for Original Title -->
+            <TableColumn fx:id="titleColumn" prefWidth="600.0" styleClass="nameStyle" text="Original Title" />
+            <!-- TableColumn for Date -->
+            <TableColumn fx:id="dateColumn" prefWidth="178.0" text="Date" />
+        </columns>
+        <!-- VBox margin -->
+        <VBox.margin>
+            <Insets />
+        </VBox.margin>
+    </TableView>
+    <!-- Pagination control -->
+    <Pagination fx:id="pager" cache="true" cacheHint="SPEED" maxHeight="-Infinity" maxPageIndicatorCount="0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="850.0" />
     <!-- END TABLE STRUCTURE -->
 
 </VBox>

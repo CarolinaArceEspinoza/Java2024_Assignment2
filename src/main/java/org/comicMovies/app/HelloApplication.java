@@ -13,19 +13,29 @@ public class HelloApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
+        // Load the FXML file for the home page
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("homePage.fxml"));
+
+        // Create a scene with the loaded FXML file and set its dimensions
         Scene scene = new Scene(fxmlLoader.load(), 1300, 700);
+
+        // Load an icon image for the stage
         Image image = new Image("file:src/main/resources/org/comicMovies/app/images/icon.png");
         stage.getIcons().add(image);
-        stage.setTitle("Your Favorite Cinematic Heroes Universe");
+
+        // Set the title of the stage
+        stage.setTitle("THE BEST CINEMATOGRAPHIC SUPERHEROES UNIVERSE");
+
+        // Set the scene to the stage and display it
         stage.setScene(scene);
         stage.show();
 
-        // Llamar a la API después de mostrar la ventana
+        // Call the API after showing the window
         homePageController controller = fxmlLoader.getController();
     }
 
     public static void main(String[] args) {
+        // Launch the JavaFX application
         launch();
     }
 }

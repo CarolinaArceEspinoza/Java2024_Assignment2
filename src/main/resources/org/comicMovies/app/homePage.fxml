@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
@@ -48,29 +49,29 @@
           <!-- TITLE -->
     <Label alignment="TOP_CENTER" contentDisplay="TEXT_ONLY" depthTest="DISABLE" nodeOrientation="LEFT_TO_RIGHT" styleClass="app-title" text="THE BEST CINEMATOGRAPHIC" textFill="WHITE">
         <font>
-            <Font name="Arial Bold" size="30.0" />
+            <Font name="Arial" size="32.0" />
         </font>
-        <effect>
-            <Bloom />
-        </effect>
       <VBox.margin>
          <Insets top="-450.0" />
       </VBox.margin>
+      <effect>
+         <DropShadow height="50.48" radius="20.3175" spread="0.45" width="32.79" />
+      </effect>
     </Label>
-   <Label alignment="TOP_CENTER" contentDisplay="TEXT_ONLY" depthTest="DISABLE" layoutX="194.0" layoutY="60.0" nodeOrientation="LEFT_TO_RIGHT" styleClass="app-title" text="SUPERHERO UNIVERSES" textFill="#ffe700">
+   <Label alignment="TOP_CENTER" contentDisplay="TEXT_ONLY" depthTest="DISABLE" layoutX="194.0" layoutY="60.0" nodeOrientation="LEFT_TO_RIGHT" styleClass="app-title" text="SUPERHERO UNIVERSES" textFill="#f5c518">
       <font>
-         <Font name="Arial Bold" size="41.0" />
+         <Font name="Arial Bold" size="45.0" />
       </font>
       <effect>
-         <Bloom />
+         <Bloom threshold="0.56" />
       </effect>
    </Label>
-   <Label alignment="TOP_CENTER" contentDisplay="TEXT_ONLY" depthTest="DISABLE" layoutX="433.0" layoutY="60.0" nodeOrientation="LEFT_TO_RIGHT" styleClass="app-title" text="PICK YOUR SIDE" textFill="#ff4747">
+   <Label alignment="TOP_CENTER" contentDisplay="TEXT_ONLY" depthTest="DISABLE" layoutX="433.0" layoutY="60.0" nodeOrientation="LEFT_TO_RIGHT" styleClass="app-title" text="PICK YOUR SIDE" textFill="WHITE">
       <font>
-         <Font name="Arial Bold" size="25.0" />
+         <Font name="Arial Bold" size="20.0" />
       </font>
       <effect>
-         <Bloom />
+         <DropShadow spread="0.01" />
       </effect>
    </Label>
     <!-- END HEADER -->

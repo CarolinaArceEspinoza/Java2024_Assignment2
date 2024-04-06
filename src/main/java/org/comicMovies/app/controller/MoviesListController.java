@@ -60,15 +60,17 @@ public class MoviesListController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+        // Initialize API client
         apiClient = new SimpleApiHttpClient();
 
+        // Listen for selection changes in the table
         containerTable.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
                 showMovieDetails(newValue.getId());
             }
         });
 
-
+        // Set initial universe selection and load movies
         if (marvelOn) {
             keyword = KEY_MCU;
             mcu_option.setSelected(true);
@@ -80,11 +82,11 @@ public class MoviesListController implements Initializable {
         }
         loadMovies(keyword, 1);
 
-        // Asignar eventos a los botones de radio
+        // Assign radio button events
         mcu_option.setToggleGroup(universeToggleGroup);
         dcu_option.setToggleGroup(universeToggleGroup);
 
-        // Manejar el cambio de selección de los botones de radio
+        // Handle radio button selection change
         mcu_option.setOnAction(event -> {
             keyword = KEY_MCU;
             loadMovies(keyword, 1);
@@ -99,11 +101,11 @@ public class MoviesListController implements Initializable {
             dcu_option.setSelected(true);
         });
 
+        // Set pagination page factory
         pager.setPageFactory((pageIndex) -> createPage(containerTable.getItems(), pageIndex));
-
-
     }
 
+    // Method to load movies from API
     private void loadMovies(String keyword, int page) {
         try {
             RespMovies resM = connApi(keyword, page);
@@ -115,6 +117,7 @@ public class MoviesListController implements Initializable {
         }
     }
 
+    // Method to connect to API and retrieve movie data
     private RespMovies connApi(String keyword, int page){
         String url = "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=" + page + "&sort_by=popularity.desc&with_keywords=" + keyword;
 
@@ -129,6 +132,7 @@ public class MoviesListController implements Initializable {
         return resM;
     }
 
+    // Method to update table with movie data
     private void updateTable(ObservableList<Movies> movies) {
         idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         titleColumn.setCellValueFactory(new PropertyValueFactory<>("title"));
@@ -136,6 +140,7 @@ public class MoviesListController implements Initializable {
         containerTable.setItems(movies);
     }
 
+    // Method to create a page in the table pagination
     public TableView<Movies> createPage(ObservableList<Movies> movies, int page) {
         connApi(keyword, page + 1);
         containerTable.setMinSize(400.0, 500.0);
@@ -143,11 +148,12 @@ public class MoviesListController implements Initializable {
         return containerTable;
     }
 
+    // Method to set the universe (MCU or DCU)
     public void setUniverse(boolean mcuButton) {
         marvelOn = mcuButton;
     }
 
-
+    // Method to show movie details in a separate stage
     private void showMovieDetails(int movieId) {
 
         try {
@@ -168,6 +174,4 @@ public class MoviesListController implements Initializable {
             e.printStackTrace();
         }
     }
-
-
 }
