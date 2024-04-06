@@ -12,70 +12,82 @@
 <?import javafx.scene.text.Font?>
 
 <!-- VISUAL STRUCTURE -->
-<!-- END VISUAL STRUCTURE -->
+<!-- This XML defines the visual structure of a UI component for displaying superhero universes. -->
 
 <VBox fx:id="tableViewContainter" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" styleClass="anchor" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.comicMovies.app.controller.homePageController">
-   <GridPane alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0">
-     <columnConstraints>
-       <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="650.0" prefWidth="650.0" />
-         <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="650.0" prefWidth="650.0" />
-     </columnConstraints>
-     <rowConstraints>
-         <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="700.0" valignment="TOP" vgrow="NEVER" />
-     </rowConstraints>
-      <children>
-          <RadioButton id="229266" fx:id="dcu_option" alignment="TOP_CENTER" contentDisplay="TOP" ellipsisString="&quot;&quot;" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#dcuButton" prefHeight="1085.0" prefWidth="974.0" scaleX="0.65" scaleY="0.65" styleClass="custom-radio-button1" text="DC EXTENDED UNIVERSE" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="TOP">
-            <font>
-               <Font size="1.0" />
-            </font>
-            <GridPane.margin>
-               <Insets left="8.0" top="-195.0" />
-            </GridPane.margin></RadioButton>
-          <RadioButton id="180547" fx:id="mcu_option" alignment="TOP_CENTER" contentDisplay="TOP" ellipsisString="&quot;&quot;" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#mcuButton" prefHeight="1085.0" prefWidth="974.0" scaleX="0.65" scaleY="0.65" styleClass="custom-radio-button2" text="MARVEL CINEMATIC UNIVERSE" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
-            <font>
-               <Font size="1.0" />
-            </font>
-            <GridPane.margin>
-               <Insets right="-8.0" top="-195.0" />
-            </GridPane.margin></RadioButton>
-      </children>
-      <VBox.margin>
-         <Insets />
-      </VBox.margin>
-   </GridPane>
+    <!-- GridPane for arranging radio buttons -->
+    <GridPane alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0">
+        <columnConstraints>
+            <!-- Column constraints for radio buttons -->
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="650.0" prefWidth="650.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="650.0" prefWidth="650.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <!-- Row constraints for radio buttons -->
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="700.0" valignment="TOP" vgrow="NEVER" />
+        </rowConstraints>
+        <children>
+            <!-- Radio button for DC Extended Universe -->
+            <RadioButton id="229266" fx:id="dcu_option" alignment="TOP_CENTER" contentDisplay="TOP" ellipsisString="&quot;&quot;" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#dcuButton" prefHeight="1085.0" prefWidth="974.0" scaleX="0.65" scaleY="0.65" styleClass="custom-radio-button1" text="DC EXTENDED UNIVERSE" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                <font>
+                    <Font size="1.0" />
+                </font>
+                <GridPane.margin>
+                    <Insets left="8.0" top="-195.0" />
+                </GridPane.margin>
+            </RadioButton>
+            <!-- Radio button for Marvel Cinematic Universe -->
+            <RadioButton id="180547" fx:id="mcu_option" alignment="TOP_CENTER" contentDisplay="TOP" ellipsisString="&quot;&quot;" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#mcuButton" prefHeight="1085.0" prefWidth="974.0" scaleX="0.65" scaleY="0.65" styleClass="custom-radio-button2" text="MARVEL CINEMATIC UNIVERSE" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                <font>
+                    <Font size="1.0" />
+                </font>
+                <GridPane.margin>
+                    <Insets right="-8.0" top="-195.0" />
+                </GridPane.margin>
+            </RadioButton>
+        </children>
+        <!-- Margin for the GridPane -->
+        <VBox.margin>
+            <Insets />
+        </VBox.margin>
+    </GridPane>
 
-          <!-- HEADER -->
+    <!-- HEADER -->
 
-          <!-- TITLE -->
+    <!-- TITLE -->
+    <!-- Label for the main title -->
     <Label alignment="TOP_CENTER" contentDisplay="TEXT_ONLY" depthTest="DISABLE" nodeOrientation="LEFT_TO_RIGHT" styleClass="app-title" text="THE BEST CINEMATOGRAPHIC" textFill="WHITE">
         <font>
             <Font name="Arial" size="32.0" />
         </font>
-      <VBox.margin>
-         <Insets top="-450.0" />
-      </VBox.margin>
-      <effect>
-         <DropShadow height="50.48" radius="20.3175" spread="0.45" width="32.79" />
-      </effect>
+        <!-- Margin for the main title -->
+        <VBox.margin>
+            <Insets top="-450.0" />
+        </VBox.margin>
+        <!-- Effect for the main title -->
+        <effect>
+            <DropShadow height="50.48" radius="20.3175" spread="0.45" width="32.79" />
+        </effect>
     </Label>
-   <Label alignment="TOP_CENTER" contentDisplay="TEXT_ONLY" depthTest="DISABLE" layoutX="194.0" layoutY="60.0" nodeOrientation="LEFT_TO_RIGHT" styleClass="app-title" text="SUPERHERO UNIVERSES" textFill="#f5c518">
-      <font>
-         <Font name="Arial Bold" size="45.0" />
-      </font>
-      <effect>
-         <Bloom threshold="0.56" />
-      </effect>
-   </Label>
-   <Label alignment="TOP_CENTER" contentDisplay="TEXT_ONLY" depthTest="DISABLE" layoutX="433.0" layoutY="60.0" nodeOrientation="LEFT_TO_RIGHT" styleClass="app-title" text="PICK YOUR SIDE" textFill="WHITE">
-      <font>
-         <Font name="Arial Bold" size="20.0" />
-      </font>
-      <effect>
-         <DropShadow spread="0.01" />
-      </effect>
-   </Label>
+    <!-- Label for the subtitle -->
+    <Label alignment="TOP_CENTER" contentDisplay="TEXT_ONLY" depthTest="DISABLE" layoutX="194.0" layoutY="60.0" nodeOrientation="LEFT_TO_RIGHT" styleClass="app-title" text="SUPERHERO UNIVERSES" textFill="#f5c518">
+        <font>
+            <Font name="Arial Bold" size="45.0" />
+        </font>
+        <!-- Effect for the subtitle -->
+        <effect>
+            <Bloom threshold="0.56" />
+        </effect>
+    </Label>
+    <!-- Label for the side note -->
+    <Label alignment="TOP_CENTER" contentDisplay="TEXT_ONLY" depthTest="DISABLE" layoutX="433.0" layoutY="60.0" nodeOrientation="LEFT_TO_RIGHT" styleClass="app-title" text="PICK YOUR SIDE" textFill="WHITE">
+        <font>
+            <Font name="Arial Bold" size="20.0" />
+        </font>
+        <!-- Effect for the side note -->
+        <effect>
+            <DropShadow spread="0.01" />
+        </effect>
+    </Label>
     <!-- END HEADER -->
-
-
-
 </VBox>
