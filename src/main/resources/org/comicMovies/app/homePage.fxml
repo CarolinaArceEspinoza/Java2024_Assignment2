@@ -57,7 +57,7 @@
          <Insets top="-450.0" />
       </VBox.margin>
     </Label>
-   <Label alignment="TOP_CENTER" contentDisplay="TEXT_ONLY" depthTest="DISABLE" layoutX="194.0" layoutY="60.0" nodeOrientation="LEFT_TO_RIGHT" styleClass="app-title" text="SUPERHEROES UNIVERSES" textFill="#ffe700">
+   <Label alignment="TOP_CENTER" contentDisplay="TEXT_ONLY" depthTest="DISABLE" layoutX="194.0" layoutY="60.0" nodeOrientation="LEFT_TO_RIGHT" styleClass="app-title" text="SUPERHERO UNIVERSES" textFill="#ffe700">
       <font>
          <Font name="Arial Bold" size="41.0" />
       </font>
@@ -65,7 +65,7 @@
          <Bloom />
       </effect>
    </Label>
-   <Label alignment="TOP_CENTER" contentDisplay="TEXT_ONLY" depthTest="DISABLE" layoutX="433.0" layoutY="60.0" nodeOrientation="LEFT_TO_RIGHT" styleClass="app-title" text="PICK YOUR SIDE" textFill="WHITE">
+   <Label alignment="TOP_CENTER" contentDisplay="TEXT_ONLY" depthTest="DISABLE" layoutX="433.0" layoutY="60.0" nodeOrientation="LEFT_TO_RIGHT" styleClass="app-title" text="PICK YOUR SIDE" textFill="#ff4747">
       <font>
          <Font name="Arial Bold" size="25.0" />
       </font>

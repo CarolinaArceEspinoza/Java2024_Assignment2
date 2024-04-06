@@ -10,6 +10,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import org.comicMovies.app.apiClient.SimpleApiHttpClient;
 import org.comicMovies.app.model.DetailMovie;
+import org.comicMovies.app.model.Genre;
 
 
 import java.net.URL;
@@ -20,7 +21,7 @@ import java.util.ResourceBundle;
 public class MovieViewController implements Initializable {
 
     @FXML
-    private Text txtId;
+    private Text txtLanguage;
     @FXML
     private Text txtOverview;
     @FXML
@@ -28,6 +29,8 @@ public class MovieViewController implements Initializable {
 
     @FXML
     private Text txtTitle;
+    @FXML
+    private Text txtGenres;
 
     private int idCurrentMovie;
     private int pageBack;
@@ -65,9 +68,15 @@ public class MovieViewController implements Initializable {
     private void updateInfo(DetailMovie movie) {
         txtTitle.setText(String.valueOf(movie.getOriginal_title()));
         txtOverview.setText(movie.getOverview());
-        txtId.setText(String.valueOf(movie.getId()));
+        txtLanguage.setText(String.valueOf(movie.getOriginal_language()));
 
         txtDate.setText(movie.getRelease_date());
+        String genresStr = "";
+        for(Genre gen : movie.getGenres()){
+            genresStr = genresStr + gen.getName() + "  •  ";
+        }
+
+        txtGenres.setText(genresStr);
         imgPoster.setImage(new Image(URI_IMG + movie.getPoster_path()));
         powerViewContainter.setBackground(
                 new Background(

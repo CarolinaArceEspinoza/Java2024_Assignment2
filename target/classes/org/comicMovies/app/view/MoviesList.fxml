@@ -14,56 +14,59 @@
 <!-- VISUAL STRUCTURE -->
 <!-- END VISUAL STRUCTURE -->
 
-<VBox fx:id="tableViewContainter" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" spacing="20.0" styleClass="anchor" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:id="tableViewContainter" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" spacing="20.0" styleClass="anchor" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
 
     <!-- HEADER -->
 
     <!-- TITLE -->
-    <Label styleClass="app-title" text="THE BEST CINEMATOGRAPHIC SUPERHEROES UNIVERSES" textFill="WHITE">
+    <Label styleClass="app-title" text="THE BEST CINEMATOGRAPHIC SUPERHERO UNIVERSES" textFill="#f5c518">
         <font>
-            <Font name="Arial Bold" size="20.0" />
+            <Font name="Arial Bold" size="25.0" />
         </font>
         <effect>
             <Bloom />
         </effect>
         <VBox.margin>
-            <Insets left="30.0" top="20.0" />
+            <Insets top="20.0" />
         </VBox.margin>
     </Label>
 
     <!-- NAVIGATION BAR -->
-    <ButtonBar buttonMinWidth="100.0" layoutX="213.0" layoutY="75.0" prefHeight="40.0" prefWidth="600.0" styleClass="buttonbar" stylesheets="@../css/style.css">
+    <ButtonBar buttonMinWidth="100.0" layoutX="213.0" layoutY="75.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="800.0" styleClass="buttonbar" stylesheets="@../css/style.css">
         <VBox.margin>
-            <Insets left="200.0" right="200.0" />
+            <Insets />
         </VBox.margin>
         <padding>
             <Insets bottom="6.0" left="6.0" right="10.0" top="6.0" />
         </padding>
       <buttons>
-          <RadioButton id="180547" fx:id="mcu_option" mnemonicParsing="false" prefHeight="18.0" prefWidth="269.0" text="MARVEL CINEMATIC UNIVERSE" />
-          <RadioButton id="229266" fx:id="dcu_option" mnemonicParsing="false" prefHeight="18.0" prefWidth="269.0" text="DC EXTENDED UNIVERSE" />
+          <RadioButton id="180547" fx:id="mcu_option" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="380.0" text="Marvel Cinematic Universe (MCU)" textAlignment="CENTER">
+            <font>
+               <Font name="Arial Bold" size="15.0" />
+            </font></RadioButton>
+          <RadioButton id="229266" fx:id="dcu_option" alignment="CENTER_LEFT" contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="380.0" text="DC Extended Universe (DCEU)" textAlignment="RIGHT">
+            <font>
+               <Font name="Arial Bold" size="15.0" />
+            </font></RadioButton>
       </buttons>
     </ButtonBar>
     <!-- END HEADER -->
 
     <!-- TABLE STRUCTURE -->
-   <TableView fx:id="containerTable" maxHeight="400.0" minHeight="400.0" prefHeight="400.0" prefWidth="900.0" styleClass="barchart" stylesheets="@../css/style.css">
+   <TableView fx:id="containerTable" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="820.0" styleClass="barchart" stylesheets="@../css/style.css">
        <!-- FIELDS -->
        <columns>
-         <TableColumn fx:id="idColumn" prefWidth="65.0" text="ID" />
-         <TableColumn fx:id="titleColumn" prefWidth="575.5" styleClass="nameStyle" text="TITLE" />
-         <TableColumn fx:id="dateColumn" prefWidth="198.5" text="DATE" />
+         <TableColumn fx:id="idColumn" prefWidth="65.0" text="ID" visible="false" />
+         <TableColumn fx:id="titleColumn" prefWidth="600.0" styleClass="nameStyle" text="Original Title" />
+         <TableColumn fx:id="dateColumn" prefWidth="178.0" text="Date" />
      </columns>
 
        <!-- DESIGN -->
       <VBox.margin>
-         <Insets bottom="10.0" left="50.0" right="50.0" top="10.0" />
+         <Insets />
       </VBox.margin>
-      <columnResizePolicy>
-         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-      </columnResizePolicy>
    </TableView>
-   <Pagination fx:id="pager" maxPageIndicatorCount="0" prefHeight="200.0" prefWidth="200.0" />
+   <Pagination fx:id="pager" cache="true" cacheHint="SPEED" maxHeight="-Infinity" maxPageIndicatorCount="0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="850.0" />
     <!-- END TABLE STRUCTURE -->
 
 </VBox>

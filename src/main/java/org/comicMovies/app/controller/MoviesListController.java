@@ -138,7 +138,8 @@ public class MoviesListController implements Initializable {
 
     public TableView<Movies> createPage(ObservableList<Movies> movies, int page) {
         connApi(keyword, page + 1);
-        containerTable.setMinSize(500, 500);
+        containerTable.setMinSize(400.0, 500.0);
+        containerTable.setMaxHeight(400.0);
         return containerTable;
     }
 
